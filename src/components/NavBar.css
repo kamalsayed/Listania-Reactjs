@@ -1,0 +1,42 @@
+.navdiv{
+    background-color: black;
+   
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+.navbar{
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reg-item .nav-link{
+    color: white;
+    display : inline;
+    float: right;
+    padding: 20px  30px;
+    display: block;
+    text-decoration: none;
+}
+.nav-item .nav-link{
+    display : inline;
+    float: left;
+    padding: 20px  30px;
+    color: white;
+    display: block;
+    text-decoration: none;
+
+}
+.reg-item:hover{
+    background-color: yellowgreen;
+}
+
+
+.nav-item:hover{
+    background-color: yellowgreen;
+}
+.active{
+    background-color: yellowgreen;
+}
