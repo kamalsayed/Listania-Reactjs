@@ -1,5 +1,9 @@
 import React from "react";
 import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import ToDo from "./components/Todo";
+import Done from "./components/Done";
+import Register from "./components/Register";
 import { useState } from "react";
 
 
@@ -15,18 +19,33 @@ export const ActiveProvider = ({children})=>{
 
 }
 
+export const PageContainer = ()=>{
+  
+  const {activePage , setActivePage} = React.useContext(ActivePage);
+      return(
+      activePage == 'Home' ? <Home /> :
+      activePage == 'To-Do' ? <ToDo /> :
+      activePage == 'Done' ? <Done /> :
+      <Register />
+      )
+      
+  }
+
+
+
 
 
 function App() {
-  
-  
- 
+   
   return (
     <>
       <div>
       <ActiveProvider>
         <NavBar />
-       
+
+      <PageContainer />
+      
+
       </ActiveProvider>  
           
         
@@ -35,4 +54,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

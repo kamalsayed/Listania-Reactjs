@@ -1,5 +1,5 @@
 .navdiv{
-    background-color: black;
+    background-color: white;
    
     overflow: hidden;
     top: 0;
@@ -13,30 +13,36 @@
 }
 
 .reg-item .nav-link{
-    color: white;
-    display : inline;
-    float: right;
-    padding: 20px  30px;
+    color: rgb(80, 80, 255);
+    font-weight: 300;
+    float: left;
+    padding: 15px  20px;
     display: block;
     text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .nav-item .nav-link{
-    display : inline;
-    float: left;
-    padding: 20px  30px;
-    color: white;
+    float: right;
+    padding: 15px  20px;
+    color: rgb(80, 80, 255);
     display: block;
     text-decoration: none;
-
-}
-.reg-item:hover{
-    background-color: yellowgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
 }
 
-
-.nav-item:hover{
-    background-color: yellowgreen;
+.reg-item:hover .nav-link{
+    background-color: rgb(80, 80, 255);
+    color: white;
 }
+
+
+.nav-item:hover .nav-link{
+    background-color: rgb(80, 80, 255);
+    color: white;
+}
+
 .active{
-    background-color: yellowgreen;
+    background-color: rgb(80, 80, 255);
+    color: white !important;
 }

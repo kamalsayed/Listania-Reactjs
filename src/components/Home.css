@@ -1,0 +1,293 @@
+.grid-container {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    width: 99%;
+    margin-left: .5%;
+    margin-top: 0px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    grid-template-columns: repeat(3 ,1fr);
+    grid-auto-rows: minmax(300px , auto);
+    column-gap: 5px;
+    min-width: 0;
+    min-height: 0;
+    overflow:auto;
+    
+    border: 0px solid honeydew;;
+    grid-template-areas: "header header header"
+                         "img img img"
+                          "img img img"
+                         "img img img"
+                         "img img img"
+                         "sidebar content content"
+                         "sidebar content content"
+                         "logos logos logos"
+                         "sidetxt leftimg leftimg"
+                         
+                         
+                          
+    
+    
+    
+}
+.to-do-img-list{
+ width: 100%;
+ height: 700px;
+}
+.marquee {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 5px;
+  }
+  
+  .marquee span {
+    
+    width: max-content;
+    
+    padding-left: 100%;
+    /* show the marquee just outside the paragraph */
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+  }
+  
+
+  
+  
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+  
+  
+  /* Respect user preferences about animations */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee span {
+      animation-iteration-count: 1;
+      animation-duration: 0.001; 
+      /* instead of animation: none, so an animationend event is 
+       * still available, if previously attached.
+       */
+      width: auto;
+      padding-left: 0;
+    }
+  }
+.small-images-marq{
+    width: 300px;
+    height: 300px;
+}
+
+.grid-item{
+    
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding:30px;
+    margin: 20px 30px 20px 30px;
+    
+    
+ }
+
+ .small-images{
+    width: 90%;
+    height: 70%;
+    margin-top: 10px;
+ }
+
+.grid-item p {
+    font-family: cursive;    
+ }
+
+.small-grid{
+    margin-inline: 15%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: minmax(200px,auto);
+    column-gap: 5px;
+    min-width: 0;
+    min-height: 0;
+    grid-template-areas: "h h h h h"
+                         "img1 img2 img3 img4 img5";
+}
+
+.small-grid-item{
+    margin-inline: 10px;
+}
+.small-grid-item p{
+    font-size: larger;
+}
+.small-grid-item h1{
+    text-transform: capitalize;
+    font-family:   "Audiowide", sans-serif; 
+    font-size:30px ;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+   margin-top: 60px;
+}
+
+.itm-1{
+    grid-area: h;
+    
+}
+.itm-2{
+    grid-area: img1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 20px;
+}
+.itm-3{
+    grid-area: img2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 20px;
+}
+.itm-4{
+    grid-area: img3;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 20px;
+}
+.itm-5{
+    grid-area: img4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 20px;
+}
+.itm-6{
+    grid-area: img5;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 20px;
+    
+}
+
+
+
+
+
+h1{
+    text-transform: capitalize;
+    font-family:   "Audiowide", sans-serif; 
+    font-size:60px ;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+ }
+
+
+.btn-home{
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color:dimgray ;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-overflow: none;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+.btn-home:hover{  
+    background-color: rgb(80, 80, 255);
+}
+
+.btn-read{
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: none;
+    background-color:inherit ;
+    color: rgb(87, 87, 252);
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    text-overflow: none;
+    
+    overflow: hidden;
+}
+.btn-read:hover{
+    background-color:  rgba(170, 170, 235, 0.2);
+    
+}
+
+
+
+.to-do-img{
+    width: 100%;
+}
+.brands{
+    color: rgb(170, 170, 166);
+    font-size: large;
+    word-spacing: 3px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    
+}
+
+.note-item{
+   padding: 180px 2px 180px 2px;
+    text-align: left;
+    margin: 0;
+}
+.note-quote{
+    color: rgb(218, 52, 52);
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.note-head{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+}
+.note-core{
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: x-large;
+    color: rgb(146, 144, 144);
+    text-align: left;
+
+}
+
+
+.item-1{
+    grid-area: header;
+    min-height: 250px;
+    overflow: hidden;
+    
+}
+.item-2{
+    grid-area: sidebar;
+    width: 90%;
+}
+.item-3{
+    grid-area: content;
+}
+.item-4 {
+    grid-area: logos;
+}
+.item-5{
+    grid-area :img;
+}
+.item-6{
+    grid-area :sidetxt;
+}
+.item-7{
+    grid-area :leftimg;
+}
+
+.marq-h1{
+    font-weight:bolder !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: larger;
+    white-space: 2px;
+    letter-spacing: 1px;
+}
+.marq-h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: 500;
+    color:rgb(156, 152, 152)
+}
