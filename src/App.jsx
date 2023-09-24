@@ -31,6 +31,19 @@ export const PageContainer = ()=>{
       
   }
 
+export const ToDoContext = React.createContext();
+
+export const ToDoProvider =({children})=>{
+  const [ToDo , setToDo] =useState([]);
+  const [Done , setDone]=useState([]);
+  return(
+    <ToDoContext.Provider value={{ToDo,setToDo,Done,setDone}}>
+      {children}
+    </ToDoContext.Provider>
+  )
+
+}
+
 
 
 
@@ -43,8 +56,11 @@ function App() {
       <ActiveProvider>
         <NavBar />
 
+      <ToDoProvider>
+
       <PageContainer />
       
+      </ToDoProvider>
 
       </ActiveProvider>  
           

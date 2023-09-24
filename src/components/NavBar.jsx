@@ -2,7 +2,7 @@ import React from "react";
 import './NavBar.css';
 import { ActivePage } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHouse , faListOl , faCheckDouble , faUserPlus} from "@fortawesome/free-solid-svg-icons";
+import {faHouse , faListOl , faCheckDouble , faUserPlus ,faL} from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -19,7 +19,7 @@ const NavBar = () => {
                 <a id="Home" onClick={()=>{
                     setActivePage('Home');
                 }} 
-                className={`nav-link ${activePage =='Home'? 'active' : '' }`} href="/#home"> <FontAwesomeIcon icon={faHouse}/> Listania</a>
+                className={`nav-link ${activePage =='Home'? 'active' : '' }`} href="/#home">   <FontAwesomeIcon icon={faL}  />istania</a>
 
                 </li>
                 <li className="nav-item">
