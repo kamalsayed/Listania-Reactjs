@@ -10,7 +10,7 @@ import { useState } from "react";
 export const ActivePage = React.createContext();
 
 export const ActiveProvider = ({children})=>{
-  const [activePage , setActivePage] =useState('Register');
+  const [activePage , setActivePage] =useState('Home');
   return (
     <ActivePage.Provider value={{activePage ,setActivePage}}>
       {children}
@@ -52,7 +52,7 @@ function App() {
    
   return (
     <>
-      <div>
+      <div id="app-div">
       <ActiveProvider>
         <NavBar />
 

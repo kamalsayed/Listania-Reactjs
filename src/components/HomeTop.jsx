@@ -18,7 +18,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMicrosoft ,faAmazon , faApple ,faYelp   } from "@fortawesome/free-brands-svg-icons";
 import {faReadme } from "@fortawesome/free-brands-svg-icons";
 import {faCircleDown} from "@fortawesome/free-solid-svg-icons";
-
 import NoteItem from "./NoteItem";
 import MarqueeItem from "./MarqueeItem";
 import HomeFooter from "./HomeFooter";

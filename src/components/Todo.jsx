@@ -1,35 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { ToDoContext } from "../App";
+import SideBar from "./SideBar";
+import './Todo.css';
+import { useSelector ,useDispatch} from 'react-redux';
+import {changeOpen} from './openCloseSlice';
+import ToDoContent from './ToDoContent';
+import {selectSide} from './SelectedSideSlice';
 
 const ToDo = () =>{
     const {ToDo,setToDo,Done,setDone} =React.useContext(ToDoContext);
-    return (
-        <>
-       <div className="grid-container">
-            <div className="grid-item item-1">
-            <p>add to do category</p>
+    const open = useSelector((state) => state.open.value);
+    const selected = useSelector((state) =>state.selectedSide.choice);
+    const dispatch = useDispatch();
+    if(open){
+        return (
+            <>
+          
+            <div className="container-todo">
+            
+                <SideBar />
+            
+           
+            
+                <ToDoContent  />
             </div>
-            <div className="grid-item">
-            <p>to do category 1</p>
-            </div>
-            <div className="grid-item">
-            <p>to do category 2</p>
-            </div>
-            <div className="grid-item">
-            <p>to do category 3</p>
-            </div>
-            <div className="grid-item">
-            <p>to do category 4</p>
-            </div>
-            <div className="grid-item">
-            <p>to do category 5</p>
-            </div>
+         
+             </>
         
         
-        
-        </div>
-        </>
-    );
+    )
+    }else{
+        return(
+<>      
+         
+            <div className="container-todo-closed">
+            
+                <SideBar />
+            
+                <ToDoContent  />
+            
+            
+            </div>
+           
+             </>
+
+        );
+    }
+   
 
 
 

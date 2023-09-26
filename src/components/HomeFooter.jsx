@@ -4,7 +4,8 @@ import {faYoutube ,faFacebook , faSquareInstagram , faTwitter} from "@fortawesom
 const HomeFooter = ()=>{
     return (
         <footer>
-            <hr />
+            <div id="hr-div"></div>
+         
             <div className="grid-footer">
                 <div className="grid-f-item f-item-1">
                 <h2> <FontAwesomeIcon icon={faL} style={{color: "#1f64db",marginRight:2}} />istania</h2>
