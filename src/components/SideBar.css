@@ -30,9 +30,7 @@
    
 }
 .main-content{
-    
     margin: 0;
-    margin-top: 15% !important;
     left: 0;
     top: 0;
     grid-area: content;
@@ -40,7 +38,7 @@
    
 }
 .main-content-closed{
-    margin-top:4%;
+    margin-top:40px;
     left: 0;
     top: 0;
     grid-area: content;
@@ -333,7 +331,7 @@
 .side-bar-content{
     
     grid-area: content;
-   margin-top: 4%;
+   
 }
 
 .side-bar-content a {
@@ -563,7 +561,7 @@
             grid-template-columns: 1;
             overflow: hidden;
             grid-template-areas: "top"
-                                "content"
+                                "top"
                                 "content"
                                 "content"
                                 "content"
@@ -841,3 +839,10 @@
     
     }
     
+    @media (max-width: 325px) {
+        .main-content{
+            margin-top: 15%;
+            
+           
+        }
+    }
