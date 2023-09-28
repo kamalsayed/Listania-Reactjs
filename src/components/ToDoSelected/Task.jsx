@@ -74,7 +74,7 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
 
                 
                 </button>
-            <p style={{textDecoration: `${comp ? 'line-through' : 'none' }`  }}>
+            <p style={{textDecoration: `${comp ? 'line-through' : 'none' }` ,fontStyle:'italic'  }}>
             {
                 text
             }
@@ -90,7 +90,7 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
 
             }} onMouseEnter={()=>{setHoverD(true)}}  
 
-            onMouseLeave={()=>{setHoverD(false)}}  className='task-todo-star'>
+            onMouseLeave={()=>{setHoverD(false)}}  className='task-todo-trash'>
                 
             <FontAwesomeIcon icon={faTrashCanSolid} style={{display  : `${ hoverD ? 'block' : 'none'} `}}  />
             <FontAwesomeIcon style={{display  : `${ hoverD ? 'none' : 'block'} `}} icon={faTrashCan} />
@@ -125,8 +125,16 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
                 
                 dispatch(toggleToDo(id));
                 playAudio();
-                }}  className='task-todo-circle'><FontAwesomeIcon style={{display :`${hover ? 'block' :'none' }`}} icon={faCircleCheck} /><FontAwesomeIcon style={{display :`${hover ? 'none' :'block' }`}} icon={faCircle} /></button>
+                }}  className='task-todo-circle'>
+                    
+                    <FontAwesomeIcon style={{display :`${hover ? 'block' :'none' }`}} icon={faCircleCheck} />
+                    
+                    <FontAwesomeIcon style={{display :`${hover ? 'none' :'block' }`}} icon={faCircle} />
+                    
+            </button>
+
             <p style={{textDecoration: `${comp ? 'line-through' : 'none' }` }}>
+
             {
                 text
             }   
@@ -141,7 +149,7 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
 
             }} onMouseEnter={()=>{setHoverD(true)}}  
 
-            onMouseLeave={()=>{setHoverD(false)}}  className='task-todo-star'>
+            onMouseLeave={()=>{setHoverD(false)}}  className='task-todo-trash'>
                 
             <FontAwesomeIcon icon={faTrashCanSolid} style={{display  : `${ hoverD ? 'block' : 'none'} `}}  />
             <FontAwesomeIcon style={{display  : `${ hoverD ? 'none' : 'block'} `}} icon={faTrashCan} />
@@ -154,7 +162,17 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
                 }
                 dispatch(toggleImportant(id))
             
-            }} onMouseEnter={()=>{setHoverI(true)}}  onMouseLeave={()=>{setHoverI(false)}}  className='task-todo-star'><FontAwesomeIcon icon={faStarSolid}  style={{display  : `${imp || hoverI ? 'block' : 'none'} `}}  /><FontAwesomeIcon style={{display  : `${imp || hoverI ? 'none' : 'block'} `}} icon={faStar} /></button>
+                }} onMouseEnter={()=>{setHoverI(true)}}  onMouseLeave={()=>{setHoverI(false)}} 
+
+                 className='task-todo-star'>
+                
+                <FontAwesomeIcon icon={faStarSolid}  
+             
+                style={{display  : `${imp || hoverI ? 'block' : 'none'} `}}  />
+             
+                <FontAwesomeIcon style={{display  : `${imp || hoverI ? 'none' : 'block'} `}} icon={faStar} />
+             
+            </button>
     
             </div>
             </>

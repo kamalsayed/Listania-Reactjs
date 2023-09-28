@@ -19,11 +19,11 @@ const MyDay =()=>{
             <div className='my-day-head'>
                 <p id='my-day-name'>My Day</p>
                 <div id='btn-my-day-cont'>
-                <button className='btn-my-day-left'><FontAwesomeIcon icon={faLightbulb} /> Suggestions</button>
-                <button className='btn-my-day-left'><FontAwesomeIcon icon={faLayerGroup} /> Group</button>
+                <button className='btn-my-day-left'><FontAwesomeIcon icon={faLightbulb} /><span> Suggestions</span></button>
+                <button className='btn-my-day-left'><FontAwesomeIcon icon={faLayerGroup} /><span> Group </span></button>
                 
                 
-                <button className='btn-my-day-left'><FontAwesomeIcon icon={faSort} /> Sort</button>
+                <button className='btn-my-day-left'><FontAwesomeIcon icon={faSort} /><span> Sort</span></button>
                 
                 </div>
             </div>

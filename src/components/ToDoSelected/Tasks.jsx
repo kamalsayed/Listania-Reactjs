@@ -40,22 +40,22 @@ const Tasks =()=>{
                 <p style={{color:'rgb(194, 56, 56)'}} id='my-day-name'> Tasks</p>
                 <div id='btn-my-day-cont'>
                 
-                <button style={{color:'rgb(194, 56, 56)'}} className='btn-my-day-left'><FontAwesomeIcon icon={faLayerGroup} /> Group</button>
+                <button style={{color:'rgb(194, 56, 56)'}} className='btn-my-day-left'><FontAwesomeIcon icon={faLayerGroup} /> <span> Group</span></button>
                 
                 
-                <button style={{color:'rgb(194, 56, 56)'}} className='btn-my-day-left'><FontAwesomeIcon icon={faSort} /> Sort</button>
+                <button style={{color:'rgb(194, 56, 56)'}} className='btn-my-day-left'><FontAwesomeIcon icon={faSort} /> <span>Sort</span></button>
                 
                 </div>
             </div>
 
             <AddTask color='rgb(194, 56, 56)' />
 
-            <div>
+            
                 {toDoList.map((toDo)=>(
                     <Task key={toDo.id} id={toDo.id} text={toDo.text} color='rgb(194, 56, 56)' />
                 ))}
 
-            </div>
+            
              
             <div style={{display:`${completedC>0 ? 'flex' : 'none'}`}}  className='completed-tasks'>
 

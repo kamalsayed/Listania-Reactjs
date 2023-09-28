@@ -111,7 +111,7 @@ const HomeTop = ()=>{
             </div>
             <div className="grid-item item-8">
             
-                    <h1 style={{fontSize:40,letterSpacing:1,margin:40}}>Gain calmness and clarity with the world’s most beloved productivity app</h1>
+                    <h1  id="foot-h1" style={{fontSize:40,letterSpacing:1,margin:40}}>Gain calmness and clarity with the world’s most beloved productivity app</h1>
                     <p>
                     337,000+ ★★★★★ reviews on Google Play and App Store
                     </p>

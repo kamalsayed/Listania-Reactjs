@@ -46,53 +46,53 @@ return(
          </div>
         <div className='side-bar-content'>
             
-        <a className={`side-bar-item ${selected =='myday'? 'selected' : '' }`} onClick={()=>{dispatch(selectSide('myday'))}} href="#"> 
+        <a className={`side-bar-item`} onClick={()=>{dispatch(selectSide('myday'))}} href="#"> 
 
-            <p>
+            <p className={`${selected =='myday'? 'selected' : '' }`}>
 
-            <FontAwesomeIcon className='content-icon' icon={faSun} /> My Day 
+            <FontAwesomeIcon className='content-icon' icon={faSun} /> <span> My Day </span>
            
 
             </p>
             <div className="side-bar-count"> <p> {mydayC > 0 ? mydayC : ''} </p> </div>
         </a>
 
-        <a className={`side-bar-item ${selected =='important'? 'selected' : '' }`} onClick={()=>{dispatch(selectSide('important'))}} href="#">
+        <a className={`side-bar-item`} onClick={()=>{dispatch(selectSide('important'))}} href="#">
 
-            <p>
+            <p className={`${selected =='important'? 'selected' : '' }`}>
 
-            <FontAwesomeIcon  className='content-icon'icon={faStar} /> Important </p>
+            <FontAwesomeIcon  className='content-icon'icon={faStar} /> <span> Important </span> </p>
             <div className="side-bar-count"> <p> {importantC > 0 ? importantC : ''} </p> </div>   
         </a>
 
-        <a className={`side-bar-item ${selected =='planned'? 'selected' : '' }`} onClick={()=>{dispatch(selectSide('planned'))}} href="#">
+        <a className={`side-bar-item`} onClick={()=>{dispatch(selectSide('planned'))}} href="#">
             
-            <p>
+            <p className={`${selected =='planned'? 'selected' : '' }`}>
                 
-            <FontAwesomeIcon className='content-icon' icon={faCalendarDays} /> Planned</p>
+            <FontAwesomeIcon className='content-icon' icon={faCalendarDays} /> <span>Planned</span> </p>
 
         </a>
 
-        <a className={`side-bar-item ${selected =='assigned'? 'selected' : '' }`} onClick={()=>{dispatch(selectSide('assigned'))}} href="#">
+        <a className={`side-bar-item`} onClick={()=>{dispatch(selectSide('assigned'))}} href="#">
             
-            <p>
-            <FontAwesomeIcon className='content-icon' icon={faUser} /> Assigned to me</p>
+            <p className={ `${selected =='assigned'? 'selected' : '' } `}> 
+            <FontAwesomeIcon className='content-icon' icon={faUser} /> <span> Assigned to me</span></p>
 
         </a>
 
-        <a className={`side-bar-item ${selected =='flagged'? 'selected' : '' }`} onClick={()=>{dispatch(selectSide('flagged'))}} href="#">
+        <a className={`side-bar-item`} onClick={()=>{dispatch(selectSide('flagged'))}} href="#">
             
-            <p>
+            <p className={`${selected =='flagged'? 'selected' : '' }`}>
                 
-            <FontAwesomeIcon className='content-icon' icon={faFlag} /> Flagged email</p>
+            <FontAwesomeIcon className='content-icon' icon={faFlag} />  <span> Flagged email </span></p>
                 
         </a>
         
-        <a className={`side-bar-item ${selected =='tasks'? 'selected' : '' }`} onClick={()=>{dispatch(selectSide('tasks'))}} href="#">
+        <a className={`side-bar-item`} onClick={()=>{dispatch(selectSide('tasks'))}} href="#">
             
-            <p>
+            <p className={`${selected =='tasks'? 'selected' : '' }`}>
                 
-            <FontAwesomeIcon className='content-icon' icon={faListCheck} /> Tasks</p>
+            <FontAwesomeIcon className='content-icon' icon={faListCheck} /> <span>  Tasks </span></p>
             <div className="side-bar-count"> <p> {tasksC > 0 ? tasksC : ''} </p> </div>  
                 
         </a>
@@ -108,11 +108,11 @@ return(
             </div>
         </div>
             <div className="side-bar-bot">
-            <a href='#'><FontAwesomeIcon icon={faEnvelope} /></a>
-            <a href='#'><FontAwesomeIcon icon={faCalendarDays} /></a>
-            <a href='#'><FontAwesomeIcon icon={faUserGroup} /></a>
-            <a href='#'><FontAwesomeIcon icon={faPaperclip} /></a>
-            <a style={{color:'rgba(55, 55, 250,.9)'}} href='#'><FontAwesomeIcon icon={faCheck} /></a>
+            <a id='bot-1' href='#'><FontAwesomeIcon icon={faEnvelope} /></a>
+            <a  id='bot-2' href='#'><FontAwesomeIcon icon={faCalendarDays} /></a>
+            <a id='bot-3' href='#'><FontAwesomeIcon icon={faUserGroup} /></a>
+            <a  id='bot-4' href='#'><FontAwesomeIcon icon={faPaperclip} /></a>
+            <a id='bot-5'  style={{color:'rgba(55, 55, 250,.9)'}} href='#'><FontAwesomeIcon icon={faCheck} /></a>
             </div>
 
         </div>

@@ -1,6 +1,6 @@
 .navdiv{
     background-color: white;
-   position: fixed;
+    position: fixed;
     overflow: hidden;
     top: 0;
     width: 100%;
@@ -46,4 +46,15 @@
 .active{
     background-color: rgb(80, 80, 255);
     color: white !important;
+}
+
+@media (max-width: 768px) {
+    .reg-item a , .nav-item a{
+       
+        font-size: 0.8em !important  ;
+        padding: 0.8em 0.4em 0.8em 0.4em !important;
+        float: left !important;
+    }
+    
+
 }

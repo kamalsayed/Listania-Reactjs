@@ -8,7 +8,7 @@ const HomeFooter = ()=>{
          
             <div className="grid-footer">
                 <div className="grid-f-item f-item-1">
-                <h2> <FontAwesomeIcon icon={faL} style={{color: "#1f64db",marginRight:2}} />istania</h2>
+                <h2 id="listania-foot"> <FontAwesomeIcon icon={faL} style={{color: "#1f64db",marginRight:2}} />istania</h2>
                 <p>Join millions of people who organize work and life with Listania.
                 </p>
                 </div>
