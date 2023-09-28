@@ -204,9 +204,9 @@
 }
 #hr-div{
     border-bottom: .1px solid rgba(165, 165, 165,.5) ;
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    width:80%;
+    margin-left: 2.5% !important;
+    margin-right:5%;
 }
 .itm-1{
     grid-area: h;

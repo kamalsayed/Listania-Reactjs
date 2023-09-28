@@ -22,14 +22,14 @@ const NavBar = () => {
                 <a id="Home" onClick={()=>{
                     setActivePage('Home');
                 }} 
-                className={`nav-link ${activePage =='Home'? 'active' : '' }`} href="/#home">   <FontAwesomeIcon icon={faL}  />istania</a>
+                className={`nav-link ${activePage =='Home'? 'active' : '' }`} href="#">   <FontAwesomeIcon icon={faL}  />istania</a>
 
                 </li>
                 <li className="nav-item">
 
                     <a id ="Register" onClick={()=>{
                     setActivePage('Register');
-                }} className={`nav-link ${activePage =='Register'? 'active' : '' }`} href="/#reg"> <FontAwesomeIcon icon={faUserPlus} /> Register</a>
+                }} className={`nav-link ${activePage =='Register'? 'active' : '' }`} href="#"> <FontAwesomeIcon icon={faUserPlus} /> Register</a>
 
                 </li>
 
@@ -37,14 +37,14 @@ const NavBar = () => {
                     <a id="Done" onClick={()=>{
                     setActivePage('Done');
                 }} 
-                className={`nav-link ${activePage =='Done'? 'active' : '' }`} href="/#done"> <FontAwesomeIcon icon={faCheckDouble} /> Done</a>
+                className={`nav-link ${activePage =='Done'? 'active' : '' }`} href="#"> <FontAwesomeIcon icon={faCheckDouble} /> Done</a>
                 </li>
 
                 <li  className="nav-item">
 
                 <a id="To-Do"onClick={()=>{
                     setActivePage('To-Do');
-                }} className={`nav-link ${activePage =='To-Do'? 'active' : '' }`}href="/#todo"> <FontAwesomeIcon icon={faListOl} /> To Do</a>
+                }} className={`nav-link ${activePage =='To-Do'? 'active' : '' }`}href="#"> <FontAwesomeIcon icon={faListOl} /> To Do</a>
                 </li>
                 
                 
