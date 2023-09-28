@@ -333,13 +333,14 @@
 .side-bar-content{
     
     grid-area: content;
-   margin-top: 5%;
+   margin-top: 4%;
 }
 
 .side-bar-content a {
     text-decoration: none ;
     margin: 0;
     color: rgb(36, 35, 35);
+}
 .side-bar-content a p {
     grid-column: 1/6;
     font-size: 0.8em;
