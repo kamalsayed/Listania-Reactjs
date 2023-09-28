@@ -21,7 +21,7 @@ const Important =()=>{
                 <div id='btn-my-day-cont'>
 
                 
-                <button className='btn-my-day-left'><FontAwesomeIcon icon={faSort} /> Sort</button>
+                <button className='btn-my-day-left'><FontAwesomeIcon icon={faSort} /> <span> Sort </span></button>
                 
                 </div>
             </div>

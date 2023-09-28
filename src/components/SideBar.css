@@ -30,7 +30,9 @@
    
 }
 .main-content{
+    
     margin: 0;
+    margin-top: 15% !important;
     left: 0;
     top: 0;
     grid-area: content;
@@ -38,7 +40,7 @@
    
 }
 .main-content-closed{
-    margin-top:40px;
+    margin-top:4%;
     left: 0;
     top: 0;
     grid-area: content;
@@ -331,14 +333,13 @@
 .side-bar-content{
     
     grid-area: content;
-   
+   margin-top: 5%;
 }
 
 .side-bar-content a {
     text-decoration: none ;
     margin: 0;
     color: rgb(36, 35, 35);
-}
 .side-bar-content a p {
     grid-column: 1/6;
     font-size: 0.8em;
@@ -571,7 +572,8 @@
                                 "content"
                                 "content"
                                 "content"
-                                "bot"
+                                "content"
+                                
                                 "bot"
                                 "bot"
                                 "bot"
@@ -590,6 +592,7 @@
                 display: none;
             }
             .side-bar-mid  {
+                display: none;
                width: 4em;
                height: fit-content;
               align-self: center;
@@ -603,7 +606,7 @@
             }
             .side-bar-bot{
                 grid-area: bot;
-               display: grid;
+               display: none;
                
                grid-template-areas: "1 1 1 1 1"
                                     "2 2 2 2 2"
@@ -648,32 +651,28 @@
                 grid-area: 5;
                 grid-column: 1/6;
             }
-            .side-btn-top{
-                
-              
-                font-size: 1rem;
-                
-                
-                margin-left: 1%;
+            .side-btn-top{              
+                font-size: 1rem;                
+                margin-left:15% !important;
                 margin-top: 20% !important;
                 padding: 1rem 1rem;
                 position:absolute;
                 margin-right: 10%;
                 right: 0;
                 top: 10;
-                left: 10;
+                left: 25;
                 z-index: 10 !important;
             }
             .side-bar-top{
      
                overflow: hidden;
                margin-top:20% !important;
-               margin-bottom: 5%;
+               margin-bottom:15%;
                grid-area: top;
             
             }
             .side-bar-content{
-                margin-top:40%;
+                margin-top:50%;
             }
             .side-bar-content .side-bar-item {
                 
@@ -685,7 +684,7 @@
         .container-todo{
             
             width:100%;
-            margin-top: 5vh;
+            margin-top: 10%;
             height: 100%;
             
             
@@ -729,7 +728,7 @@
             font-size: 0.6em;
         }
         .btn-my-day-left span{
-            display: none;
+            display: none !important;
         }
         .my-day-head{
             
