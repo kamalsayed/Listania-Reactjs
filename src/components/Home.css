@@ -37,7 +37,7 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-gap:4vw;
+    grid-gap:1.5vw;
    
   }
   
@@ -48,7 +48,7 @@
     padding-left: 100%;
     /* show the marquee just outside the paragraph */
     will-change: transform;
-    animation: marquee 15s linear infinite;
+    animation: marquee 10s linear infinite;
 
   }
   
@@ -56,8 +56,12 @@
   
   
   @keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-120%, 0); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-130%);
+    }
   }
   
   
@@ -65,7 +69,7 @@
   
   @media (prefers-reduced-motion: reduce) {
     .marquee span {
-      animation-iteration-count: 1;
+      animation-iteration-count: 5;
       animation-duration: 0.001; 
       /* instead of animation: none, so an animationend event is 
        * still available, if previously attached.
@@ -78,6 +82,52 @@
     width: 300px;
     height: 300px;
 }
+
+.reg-container{
+    margin-top: 15vw;
+    display: grid;
+    width: 30%;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1,1fr);
+    box-shadow: 3px 3px 30px 15px rgba(56, 77, 182, 0.3);
+    background-color: transparent;
+    margin-left: 40rem;
+    border-radius: 3rem;
+    padding: 5rem;
+}
+
+.reg-container input[type="text"] , input[type="password"]{
+        width: 50%;
+        justify-self: center;
+        height: 2rem;
+        outline: none;
+        font-size: 1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 0.5px;
+        color: rgb(54, 54, 54);
+}
+.reg-container button{
+    border: none;
+    width: 15%;
+    justify-self: center;
+    padding: .5rem;
+    background-color: rgb(137, 137, 233);
+    border-radius: 4px;
+    color:white;
+}
+.reg-container h2{
+   text-align: center;
+   font-size: xx-large;
+}
+
+.reg-container button:hover{
+    
+    background-color: rgb(105, 105, 243);
+    
+    color:white;
+}
+
+
 
 .grid-item{
     

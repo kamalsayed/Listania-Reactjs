@@ -3,6 +3,7 @@ import openReducer from './openCloseSlice';
 import selectedSideReducer from './SelectedSideSlice';
 import addTaskReducer from './addTaskSlice';
 import toDoReducer from './ToDoListSlice';
+import deleteTaskReducer from './deleteSlice';
 
 const reducer = (state, action) => {
   // The reducer function updates the state based on the action.
@@ -16,6 +17,7 @@ export const store = configureStore({
       selectedSide:selectedSideReducer,
       showTask: addTaskReducer,
       todolist:toDoReducer,
+      deleteItem:deleteTaskReducer,
     },
 
 });

@@ -9,8 +9,14 @@
     position: relative;
     align-content: flex-start;
     background-color: rgb(247, 247, 247);
-
+    
 }
+
+.delete{
+    filter: blur(10px);
+    pointer-events: none;
+}
+
 .container-todo-closed{
     display: grid;
     grid-template-columns:repeat(5,1fr);

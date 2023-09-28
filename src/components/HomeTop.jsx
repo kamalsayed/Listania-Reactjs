@@ -105,7 +105,7 @@ const HomeTop = ()=>{
                     <MarqueeItem img ={taskcomplete} alt ='completed-task' h1='2 Billion+' h2='Completed Task' />
                     <MarqueeItem img ={worldwide} alt ='worldwide' h1='160+ Countries' h2='Worldwide' />
                     <MarqueeItem img ={download} alt ='downloads' h1='30+ Million' h2='app downloads' />
-                                   
+                   
                 </div>
 
             </div>

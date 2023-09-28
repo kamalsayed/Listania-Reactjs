@@ -23,7 +23,7 @@ const SideBarContent=()=>{
         const tasksC = toDoList.filter((todo)=> (todo.completed === false && todo.important ===true)||
         (todo.completed === false && todo.important ===false)
         ).length;
-        console.log(mydayC)
+        
         return {mydayC ,importantC ,tasksC};
     }
     

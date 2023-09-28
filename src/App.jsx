@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import ToDo from "./components/Todo";
 import Done from "./components/Done";
 import Register from "./components/Register";
 import { useState } from "react";
+import {selectSide} from './components/SelectedSideSlice';
+
+import { useSelector ,useDispatch} from 'react-redux';
 
 
 export const ActivePage = React.createContext();
@@ -20,12 +23,22 @@ export const ActiveProvider = ({children})=>{
 }
 
 export const PageContainer = ()=>{
-  
   const {activePage , setActivePage} = React.useContext(ActivePage);
+  const selected = useSelector((state) =>state.selectedSide.choice);
+  const dispatch = useDispatch();
+  
+    useEffect(() => {
+    if(activePage =='Done'){
+    if (selected !== 'tasks') {
+      dispatch(selectSide('tasks'));
+    }
+    }
+    }, [activePage]);
+
       return(
       activePage == 'Home' ? <Home /> :
       activePage == 'To-Do' ? <ToDo /> :
-      activePage == 'Done' ? <Done /> :
+      activePage == 'Done' ? <ToDo  />  :
       <Register />
       )
       

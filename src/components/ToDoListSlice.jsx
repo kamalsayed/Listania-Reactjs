@@ -13,7 +13,7 @@ export const ToDoListSlice = createSlice({
                 important:false,
                 completed:false
             })
-            console.log(state.todos[0]);
+            
         },
         toggleToDo :(state,action)=>{
             const todo = state.todos.find(todo =>todo.id === action.payload);
@@ -22,11 +22,14 @@ export const ToDoListSlice = createSlice({
         toggleImportant :(state,action)=>{
             const todo = state.todos.find(todo =>todo.id === action.payload);
             todo.important =!todo.important;
+        },
+        removeToDo: (state ,action)=>{
+            state.todos = state.todos.filter((todo)=>todo.id !== action.payload);
         }
     }
 
 });
 
-export const {addToDo , toggleToDo ,toggleImportant} = ToDoListSlice.actions;
+export const {addToDo , toggleToDo ,toggleImportant ,removeToDo} = ToDoListSlice.actions;
 export default ToDoListSlice.reducer;
 

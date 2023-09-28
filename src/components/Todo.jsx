@@ -5,27 +5,34 @@ import './Todo.css';
 import { useSelector ,useDispatch} from 'react-redux';
 import {changeOpen} from './openCloseSlice';
 import ToDoContent from './ToDoContent';
-import {selectSide} from './SelectedSideSlice';
+import DialogMsg from './ToDoSelected/dialogMsg';
 
-const ToDo = () =>{
+const ToDo = ({state}) =>{
     const {ToDo,setToDo,Done,setDone} =React.useContext(ToDoContext);
     const open = useSelector((state) => state.open.value);
     const selected = useSelector((state) =>state.selectedSide.choice);
     const dispatch = useDispatch();
+    const deleteSelect = useSelector((state) => state.deleteItem.id);
+
     if(open){
         return (
+            
             <>
           
-            <div className="container-todo">
+            <div  className={`container-todo ${deleteSelect ? 'delete' : ''}`}>
             
                 <SideBar />
             
            
-            
+           
+
                 <ToDoContent  />
+                
+                
+
             </div>
-         
-             </>
+            {deleteSelect ? <DialogMsg /> : <></> }
+             </> 
         
         
     )
@@ -33,15 +40,15 @@ const ToDo = () =>{
         return(
 <>      
          
-            <div className="container-todo-closed">
+            <div className={`container-todo-closed ${deleteSelect ? 'delete' : ''}`}>
             
                 <SideBar />
             
                 <ToDoContent  />
             
-            
+                
             </div>
-           
+            {deleteSelect ? <DialogMsg /> : <></> }
              </>
 
         );

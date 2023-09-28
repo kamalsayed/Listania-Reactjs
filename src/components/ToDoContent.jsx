@@ -6,10 +6,14 @@ import Planned from './ToDoSelected/Planned';
 import AssignedTasks from './ToDoSelected/AssignedTasks';
 import FlaggedEmail from './ToDoSelected/FlaggedEmail';
 import Tasks from './ToDoSelected/Tasks';
+import { useEffect } from 'react';
 
 
-const ToDoContent =({props})=>{
+const ToDoContent =({state})=>{
     const selected = useSelector((state) =>state.selectedSide.choice);
+    const dispatch = useDispatch();
+
+   
     switch(selected){
         case 'myday':
             return <MyDay/>
@@ -32,7 +36,8 @@ const ToDoContent =({props})=>{
         default:
             return <MyDay />
             break;
-    }
+    
+}
     
     
     

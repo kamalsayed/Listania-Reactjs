@@ -1,20 +1,33 @@
-import {faCircle,faStar,faCircleCheck} from '@fortawesome/free-regular-svg-icons';
-import{faStar as faStarSolid} from "@fortawesome/free-solid-svg-icons";
+import {faCircle,faStar,faCircleCheck , faTrashCan} from '@fortawesome/free-regular-svg-icons';
+import{faStar as faStarSolid , faTrashCan as faTrashCanSolid} from "@fortawesome/free-solid-svg-icons";
 import '../Todo.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {addToDo , toggleToDo ,toggleImportant} from '../ToDoListSlice';
+import {addToDo , toggleToDo ,toggleImportant , removeToDo} from '../ToDoListSlice';
 import { useSelector ,useDispatch} from 'react-redux';
 import { useState } from 'react';
-import audiofile from '../../assets/mixkit-bike-notification-bell-590.wav';
+import audiofile from '../../assets/sounds/mixkit-bike-notification-bell-590.wav';
 
+import autofileImp from '../../assets/sounds/bell-transition-141421.mp3';
+import {setDelete , clearDelete} from '../deleteSlice';
 
 const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
 
     
     const playAudio = () => {
         const audio = new Audio(audiofile);
+        audio.volume =0.3;
         audio.play();
     };
+
+  
+
+    const playAudioImp = () => {
+        const audio = new Audio(autofileImp);
+        audio.volume =0.3;
+        audio.play();
+    };
+
+    const deleteSelect = useSelector((state) => state.deleteItem.id);
 
     const toDoList = useSelector((state) => state.todolist.todos);
 
@@ -23,6 +36,8 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
     const [hover ,setHover] =useState(false);
 
     const [hoverI ,setHoverI] =useState(false);
+
+    const [hoverD ,setHoverD] =useState(false);
 
     const getCompleted=()=>{
         const complete=toDoList.find(todo =>todo.id === id);
@@ -65,7 +80,39 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
             }
          
             </p>
-            <button  style={{color:color}} onClick={()=>{dispatch(toggleImportant(id))}} onMouseEnter={()=>{setHoverI(true)}}  onMouseLeave={()=>{setHoverI(false)}}  className='task-todo-star'><FontAwesomeIcon icon={faStarSolid}  style={{display  : `${imp || hoverI ? 'block' : 'none'} `}}  /><FontAwesomeIcon style={{display  : `${imp || hoverI ? 'none' : 'block'} `}} icon={faStar} /></button>
+           
+            <button  style={{color:color}} 
+
+            onClick={()=>{
+                dispatch(setDelete(id));
+                //dispatch(removeToDo(id))
+               // playAudioDel();
+
+            }} onMouseEnter={()=>{setHoverD(true)}}  
+
+            onMouseLeave={()=>{setHoverD(false)}}  className='task-todo-star'>
+                
+            <FontAwesomeIcon icon={faTrashCanSolid} style={{display  : `${ hoverD ? 'block' : 'none'} `}}  />
+            <FontAwesomeIcon style={{display  : `${ hoverD ? 'none' : 'block'} `}} icon={faTrashCan} />
+
+            </button> 
+
+            <button  style={{color:color}} 
+            onClick={()=>{
+                if(!imp){
+                    playAudioImp();
+                }
+                dispatch(toggleImportant(id))
+                
+            }}
+
+             onMouseEnter={()=>{setHoverI(true)}}  onMouseLeave={()=>{setHoverI(false)}} className='task-todo-star'>
+
+            <FontAwesomeIcon icon={faStarSolid}  style={{display  : `${imp || hoverI ? 'block' : 'none'} `}}  />
+
+            <FontAwesomeIcon style={{display  : `${imp || hoverI ? 'none' : 'block'} `}} icon={faStar} />
+            
+            </button>
     
             </div>
             </>
@@ -82,10 +129,32 @@ const Task =({id , text ,completed ,color ='rgb(82, 82, 236)'})=>{
             <p style={{textDecoration: `${comp ? 'line-through' : 'none' }` }}>
             {
                 text
-            }
+            }   
          
             </p>
-            <button style={{color:color}} onClick={()=>{dispatch(toggleImportant(id))}} onMouseEnter={()=>{setHoverI(true)}}  onMouseLeave={()=>{setHoverI(false)}}  className='task-todo-star'><FontAwesomeIcon icon={faStarSolid}  style={{display  : `${imp || hoverI ? 'block' : 'none'} `}}  /><FontAwesomeIcon style={{display  : `${imp || hoverI ? 'none' : 'block'} `}} icon={faStar} /></button>
+
+            <button  style={{color:color}} 
+
+            onClick={()=>{
+                
+                dispatch(setDelete(id));
+
+            }} onMouseEnter={()=>{setHoverD(true)}}  
+
+            onMouseLeave={()=>{setHoverD(false)}}  className='task-todo-star'>
+                
+            <FontAwesomeIcon icon={faTrashCanSolid} style={{display  : `${ hoverD ? 'block' : 'none'} `}}  />
+            <FontAwesomeIcon style={{display  : `${ hoverD ? 'none' : 'block'} `}} icon={faTrashCan} />
+
+            </button>
+
+            <button style={{color:color}} onClick={()=>{
+                if(!imp){
+                    playAudioImp();
+                }
+                dispatch(toggleImportant(id))
+            
+            }} onMouseEnter={()=>{setHoverI(true)}}  onMouseLeave={()=>{setHoverI(false)}}  className='task-todo-star'><FontAwesomeIcon icon={faStarSolid}  style={{display  : `${imp || hoverI ? 'block' : 'none'} `}}  /><FontAwesomeIcon style={{display  : `${imp || hoverI ? 'none' : 'block'} `}} icon={faStar} /></button>
     
             </div>
             </>

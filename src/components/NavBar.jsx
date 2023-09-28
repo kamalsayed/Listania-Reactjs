@@ -3,16 +3,19 @@ import './NavBar.css';
 import { ActivePage } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHouse , faListOl , faCheckDouble , faUserPlus ,faL} from "@fortawesome/free-solid-svg-icons";
-
+import { useSelector } from "react-redux";
 
 
 
 const NavBar = () => {
     const {activePage , setActivePage} = React.useContext(ActivePage);
+
+    const deleteSelect = useSelector((state) => state.deleteItem.id);
+
     return(
         <>
        
-        <div className="navdiv">
+        <div style={{pointerEvents :`${deleteSelect ? 'none' :'all'}`}} className="navdiv">
             <ul className="navbar">
 
                 <li className="reg-item">
