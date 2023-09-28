@@ -270,7 +270,7 @@
     grid-template-columns: 1;
     overflow: hidden;
     grid-template-areas: "top"
-                        "content"
+                         "top"
                         "content"
                         "content"
                         "content"
@@ -537,12 +537,15 @@
     display: none;
         
         }
+
+
+        
   
        
      
     }
 
-
+    
 
     @media (max-width: 1032px) {
 
@@ -832,8 +835,58 @@
         color:rgb(82, 82, 236);
       
     }
+
+    @media (max-height : 685px){
+        .side-bar{
+            box-shadow: 4px 4px 5px rgb(131, 130, 130,0.3);
+            display: grid;
+            background-color: white;
+            transition: width 0.5s ease;
+            position: fixed;
+            width:6vw ;
+            top: 0;
+            left: 0;
+            height: calc(100% - 2vw);
+            margin-top: 2vw;
+            grid-template-columns: 1;
+            overflow: hidden;
+            grid-template-areas: "top"
+                                 "top"
+                                "top"
+                                "top"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "bot"
+        
+            ;
+        
+        }
+        
+
+        .side-bar-top{
+         
+            overflow: hidden;
+           margin-top:20px;
+           grid-area: top;
+          margin-bottom:1em;
+        
+        
+        }
+
+    }
     
-    
+   
     
     
     
@@ -846,3 +899,56 @@
            
         }
     }
+
+    
+    
+    @media (max-height : 685px){
+        .side-bar{
+            box-shadow: 4px 4px 5px rgb(131, 130, 130,0.3);
+            display: grid;
+            background-color: white;
+            transition: width 0.5s ease;
+            position: fixed;
+            width:16vw ;
+            top: 0;
+            left: 0;
+            height: calc(100% - 2vw);
+            margin-top: 2vw;
+            grid-template-columns: 1;
+            overflow: hidden;
+            grid-template-areas: "top"
+                                 "top"
+                                "top"
+                                "top"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "content"
+                                "bot"
+        
+            ;
+        
+        }
+        
+
+        .side-bar-top{
+         
+            overflow: hidden;
+           margin-top:20px;
+           grid-area: top;
+          margin-bottom:1em;
+        
+        
+        }
+
+    }
+    
