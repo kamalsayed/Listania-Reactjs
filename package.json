@@ -1,5 +1,5 @@
 {
-  "name": "Listania-Reactjs",
+  "name": "listania-reactjs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,8 +17,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@reduxjs/toolkit": "^1.9.6",
-    "Listania-Reactjs": "file:",
     "babel-plugin-macros": "^3.1.0",
+    "listania-reactjs": "file:",
+    "Listania-Reactjs": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
